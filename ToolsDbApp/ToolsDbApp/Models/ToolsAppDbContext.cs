@@ -24,7 +24,7 @@ public class ToolsAppDbContext : DbContext
         Make = "Ford",
         Model = "Fusion Hybrid",
         Year = 2022,
-        Color = "blue",
+        BodyColor = "blue",
         Price = 45000m,
         Country = "USA",
         Transmission = "automatic"
@@ -35,7 +35,7 @@ public class ToolsAppDbContext : DbContext
         Make = "Tesla",
         Model = "S",
         Year = 2020,
-        Color = "red",
+        BodyColor = "red",
         Price = 120000m,
         Country = "USA",
         Transmission = "automatic"

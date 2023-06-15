@@ -11,8 +11,8 @@ using ToolsDbApp.Models;
 namespace ToolsDbApp.Migrations
 {
     [DbContext(typeof(ToolsAppDbContext))]
-    [Migration("20230615180245_RemoveExteriorColor")]
-    partial class RemoveExteriorColor
+    [Migration("20230615181109_UpdateCarToBodyColor")]
+    partial class UpdateCarToBodyColor
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,7 +32,7 @@ namespace ToolsDbApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Color")
+                    b.Property<string>("BodyColor")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -67,7 +67,7 @@ namespace ToolsDbApp.Migrations
                         new
                         {
                             Id = 1,
-                            Color = "blue",
+                            BodyColor = "blue",
                             Country = "USA",
                             Make = "Ford",
                             Model = "Fusion Hybrid",
@@ -78,7 +78,7 @@ namespace ToolsDbApp.Migrations
                         new
                         {
                             Id = 2,
-                            Color = "red",
+                            BodyColor = "red",
                             Country = "USA",
                             Make = "Tesla",
                             Model = "S",

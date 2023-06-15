@@ -29,7 +29,7 @@ namespace ToolsDbApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Color")
+                    b.Property<string>("BodyColor")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -64,7 +64,7 @@ namespace ToolsDbApp.Migrations
                         new
                         {
                             Id = 1,
-                            Color = "blue",
+                            BodyColor = "blue",
                             Country = "USA",
                             Make = "Ford",
                             Model = "Fusion Hybrid",
@@ -75,7 +75,7 @@ namespace ToolsDbApp.Migrations
                         new
                         {
                             Id = 2,
-                            Color = "red",
+                            BodyColor = "red",
                             Country = "USA",
                             Make = "Tesla",
                             Model = "S",

@@ -5,7 +5,7 @@
 namespace ToolsDbApp.Migrations
 {
     /// <inheritdoc />
-    public partial class RemoveExteriorColor : Migration
+    public partial class UpdateCarToBodyColor : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,20 +17,20 @@ namespace ToolsDbApp.Migrations
             migrationBuilder.RenameColumn(
                 name: "InteriorColor",
                 table: "Car",
-                newName: "Color");
+                newName: "BodyColor");
 
             migrationBuilder.UpdateData(
                 table: "Car",
                 keyColumn: "Id",
                 keyValue: 1,
-                column: "Color",
+                column: "BodyColor",
                 value: "blue");
 
             migrationBuilder.UpdateData(
                 table: "Car",
                 keyColumn: "Id",
                 keyValue: 2,
-                column: "Color",
+                column: "BodyColor",
                 value: "red");
         }
 
@@ -38,7 +38,7 @@ namespace ToolsDbApp.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.RenameColumn(
-                name: "Color",
+                name: "BodyColor",
                 table: "Car",
                 newName: "InteriorColor");
 
