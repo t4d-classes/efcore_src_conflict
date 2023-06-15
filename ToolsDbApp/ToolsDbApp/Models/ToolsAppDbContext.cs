@@ -27,7 +27,8 @@ public class ToolsAppDbContext : DbContext
         InteriorColor = "tan",
         ExteriorColor = "blue",
         Price = 45000m,
-        Country = "USA"
+        Country = "USA",
+        Transmission = "automatic"
       },
       new()
       {
@@ -38,7 +39,8 @@ public class ToolsAppDbContext : DbContext
         InteriorColor = "black",
         ExteriorColor = "red",
         Price = 120000m,
-        Country = "USA"
+        Country = "USA",
+        Transmission = "automatic"
       }
     );
   }

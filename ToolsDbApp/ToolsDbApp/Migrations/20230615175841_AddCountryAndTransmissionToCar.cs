@@ -5,7 +5,7 @@
 namespace ToolsDbApp.Migrations
 {
     /// <inheritdoc />
-    public partial class AddCountryToCar : Migration
+    public partial class AddCountryAndTransmissionToCar : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,19 +17,26 @@ namespace ToolsDbApp.Migrations
                 nullable: false,
                 defaultValue: "");
 
+            migrationBuilder.AddColumn<string>(
+                name: "Transmission",
+                table: "Car",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
             migrationBuilder.UpdateData(
                 table: "Car",
                 keyColumn: "Id",
                 keyValue: 1,
-                column: "Country",
-                value: "USA");
+                columns: new[] { "Country", "Transmission" },
+                values: new object[] { "USA", "automatic" });
 
             migrationBuilder.UpdateData(
                 table: "Car",
                 keyColumn: "Id",
                 keyValue: 2,
-                column: "Country",
-                value: "USA");
+                columns: new[] { "Country", "Transmission" },
+                values: new object[] { "USA", "automatic" });
         }
 
         /// <inheritdoc />
@@ -37,6 +44,10 @@ namespace ToolsDbApp.Migrations
         {
             migrationBuilder.DropColumn(
                 name: "Country",
+                table: "Car");
+
+            migrationBuilder.DropColumn(
+                name: "Transmission",
                 table: "Car");
         }
     }

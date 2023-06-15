@@ -10,6 +10,6 @@ public class Car
   public string InteriorColor { get; set; } = null!;
   public string ExteriorColor { get; set; } = null!;
   public decimal Price { get; set; }
-
   public string Country { get; set; } = null!;
+  public string Transmission { get; set; } = null!;
 }

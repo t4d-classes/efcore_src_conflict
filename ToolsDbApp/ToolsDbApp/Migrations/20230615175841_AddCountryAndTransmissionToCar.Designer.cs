@@ -11,8 +11,8 @@ using ToolsDbApp.Models;
 namespace ToolsDbApp.Migrations
 {
     [DbContext(typeof(ToolsAppDbContext))]
-    [Migration("20230615171348_AddCountryToCar")]
-    partial class AddCountryToCar
+    [Migration("20230615175841_AddCountryAndTransmissionToCar")]
+    partial class AddCountryAndTransmissionToCar
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,6 +56,10 @@ namespace ToolsDbApp.Migrations
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("Transmission")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Year")
                         .HasColumnType("int");
 
@@ -73,6 +77,7 @@ namespace ToolsDbApp.Migrations
                             Make = "Ford",
                             Model = "Fusion Hybrid",
                             Price = 45000m,
+                            Transmission = "automatic",
                             Year = 2022
                         },
                         new
@@ -84,6 +89,7 @@ namespace ToolsDbApp.Migrations
                             Make = "Tesla",
                             Model = "S",
                             Price = 120000m,
+                            Transmission = "automatic",
                             Year = 2020
                         });
                 });
