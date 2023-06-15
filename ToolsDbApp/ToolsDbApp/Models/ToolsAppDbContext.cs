@@ -26,7 +26,8 @@ public class ToolsAppDbContext : DbContext
         Year = 2022,
         InteriorColor = "tan",
         ExteriorColor = "blue",
-        Price = 45000m
+        Price = 45000m,
+        Country = "USA"
       },
       new()
       {
@@ -36,7 +37,8 @@ public class ToolsAppDbContext : DbContext
         Year = 2020,
         InteriorColor = "black",
         ExteriorColor = "red",
-        Price = 120000m
+        Price = 120000m,
+        Country = "USA"
       }
     );
   }
