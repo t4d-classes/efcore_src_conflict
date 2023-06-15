@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ToolsDbApp.Models;
 
@@ -10,9 +11,11 @@ using ToolsDbApp.Models;
 namespace ToolsDbApp.Migrations
 {
     [DbContext(typeof(ToolsAppDbContext))]
-    partial class ToolsAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230615180245_RemoveExteriorColor")]
+    partial class RemoveExteriorColor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
